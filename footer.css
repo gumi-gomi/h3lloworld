@@ -1,0 +1,33 @@
+.footer{
+  width: 100vw; height: 150px;
+  text-align: center;
+  margin: 0 auto;
+  /* background-color: rgba(56,56,56,0.3); */
+  background-image: url(img/footer.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.footer .footerInner{
+  width: 1000px;
+  height: 100%;
+  /* outline: 1px dotted red; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.footer .footerInner .txt{
+  flex: 1;
+  height: 50px;
+  /* outline: 1px solid rgba(56,56,56,0.1); */
+  margin: 30px;
+  border-radius: 10px;
+  line-height: 50px;
+  font-weight: 700;
+  font-size: 20px;
+  color: rgba(54,54,54,1);
+  background-color: rgba(256,256,256,0.7);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}

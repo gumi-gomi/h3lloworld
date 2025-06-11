@@ -1,0 +1,108 @@
+.headerbox1{
+  width: 60px; height: 100vh; 
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  background-color: #fff;
+  /* outline: 3px solid #000; */
+  z-index: 10;
+  box-shadow: 3px 0px 8px rgba(0,0,0,0.2);
+  
+}
+.headerbox1 div:nth-child(1){
+  width: 100%;
+  height: 20%;
+  outline: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+.headerbox1 div:nth-child(1) h1{
+  transform: rotate(90deg);
+}
+.headerbox1 div:nth-child(2){
+  width: 100%;
+  height: 30%;
+  outline: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerbox1 div:nth-child(2) p{
+  transform: rotate(90deg);
+  /* background-color: red; */
+  padding: 10px 50px;
+  white-space: nowrap
+}
+.headerbox1 div:nth-child(3){
+  width: 100%;
+  height: 60%;
+  outline: 1px solid #000;
+  background-image: url(img/headerBtm.png);
+}
+.headerbox2{
+  width: 60px; height: 100vh; 
+  text-align: center;
+  line-height: 100px;
+  position: fixed;
+  /* margin: 0 auto; */
+  right: 0px;
+  background-color: #fff;
+  z-index: 10;
+    box-shadow: -3px 0px 8px rgba(0,0,0,0.2);
+  
+}
+.headerbox2 div:nth-child(1){
+  width: 100%;
+  height: 20%;
+  outline: 1px solid #000;
+    background-image: url(img/headerBtm3.png);
+}
+.headerbox2 div:nth-child(1) ul{
+  list-style: none;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.headerbox2 div:nth-child(1) ul li{
+    outline: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  overflow: hidden; /* 회전된 요소 넘치는 거 방지 */
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  /* background-image: url(img/paper.png); */
+}
+.headerbox2 div:nth-child(1) ul li:hover{
+    background-color: rgba(255,216,0,0.3);
+    font-weight: 700;
+}
+
+.rotate-text {
+  display: inline-block;
+  transform: rotate(90deg);
+  transform-origin: center;
+  white-space: nowrap;
+}
+.headerbox2 div:nth-child(1) ul li:nth-child(1){}
+.headerbox2 div:nth-child(1) ul li:nth-child(2){}
+
+.headerbox2 div:nth-child(2){
+  width: 100%;
+  height: 50%;
+  outline: 1px solid #000;
+  background-image: url(img/headerBtm2.png);
+}
+.headerbox2 div:nth-child(3){
+  width: 100%;
+  height: 30%;
+  outline: 1px solid #000;
+  background-image: url(img/headerBtm.png);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="body.css">
+  <link rel="stylesheet" href="footer.css">
+  <!-- <script src="body.js" defer></script> -->
+  <title>H3LLOWORLD</title>
+</head>
+<body>
+  <div id="center">
+    <div id="header"></div>
+    <div id="body"></div>
+    <div id="footer"></div>
+  </div>
+</body>
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+        fetch('body.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('body').innerHTML = data;
+
+      // ✅ body.html 삽입 완료 후 body.js 실행
+      const script = document.createElement('script');
+      script.src = 'body.js?v=' + Date.now(); // 캐시 방지
+      document.body.appendChild(script);
+    });
+        fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+</html>
