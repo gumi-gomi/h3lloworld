@@ -116,7 +116,7 @@
     init();
   }
 })();
-document.addEventListener('wheel', e => {
+/* document.addEventListener('wheel', e => {
   if (e.ctrlKey) {
     e.preventDefault(); // ctrl+휠 스크롤일 때 줌 막음
   }
@@ -130,4 +130,4 @@ document.addEventListener('keydown', e => {
 }); 
 window.addEventListener('DOMContentLoaded', () => {
   document.documentElement.style.zoom = '100%';
-});
+}); */
