@@ -108,3 +108,12 @@
   outline: 1px solid #000;
   background-image: url(img/headerBtm.png);
 }
+
+@media screen and (max-width:880px) {
+  .headerbox1{
+    display: none;
+  }
+  .headerbox2{
+    display: none;
+  }
+}
