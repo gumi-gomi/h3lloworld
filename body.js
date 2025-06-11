@@ -127,7 +127,7 @@ document.addEventListener('keydown', e => {
   if ((e.ctrlKey||e.metaKey) && ['=','-','+','_'].includes(e.key)) {
     e.preventDefault();
   }
-}); 
+});  */
 window.addEventListener('DOMContentLoaded', () => {
   document.documentElement.style.zoom = '100%';
-}); */
+});
