@@ -20,6 +20,7 @@
 }
 .headerbox1 div:nth-child(1) h1{
   transform: rotate(90deg);
+  font-size: 2vh;
 }
 .headerbox1 div:nth-child(2){
   width: 100%;
@@ -33,7 +34,8 @@
   transform: rotate(90deg);
   /* background-color: red; */
   padding: 10px 50px;
-  white-space: nowrap
+  white-space: nowrap;
+   font-size: 2vh;
 }
 .headerbox1 div:nth-child(3){
   width: 100%;
