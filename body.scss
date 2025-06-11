@@ -55,7 +55,7 @@
    /* outline: 1px dotted red; */
 }
 .bg-container span{
-  font-size: 200px;
+  // font-size: 200px;
   /* outline: 1px dotted red; */
 }
 .bg-container .bgleft{
@@ -79,17 +79,19 @@
 
 .mainTxt{
   position: absolute;
-  top: -5%;
+  top: -10%;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  // font-size: 200px;
-  // font-size: 0vw;
+  font-size: 10px;
   text-shadow: 5px 5px 8px rgba(0,0,0,0.1);
-}
-.scroll-track {
-  display: inline-flex;
-  animation: moveLoop 35s linear infinite;
+  .scroll-track {
+    display: inline-flex;
+    animation: moveLoop 35s linear infinite;
+    span{
+      font-size: 19rem;
+    }
+  }
 }
 .mainTxt2{
   position: absolute;
@@ -190,9 +192,10 @@
   }
   .leftgif{
     position: absolute;
-    left: 50%; transform: translateX(-50%);
-    width: 1300px;
-    top: 2%; 
+    left: 50%;
+    top: 50%; 
+     transform: translate(-50%, -70%);
+    width: 1200px;
      filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.3));
   }
   .leftTxt{
@@ -200,8 +203,9 @@
     height: 300px;
     // outline: 1px dotted red;
     position: absolute;
-    left: 50%; transform: translateX(-50%);
-    top: 600px;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%,40%);
     
     h1{
       text-transform: uppercase;

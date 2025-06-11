@@ -62,7 +62,6 @@
 }
 
 .bg-container span {
-  font-size: 200px;
   /* outline: 1px dotted red; */
 }
 
@@ -92,16 +91,19 @@
 
 .mainTxt {
   position: absolute;
-  top: -5%;
+  top: -10%;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 10px;
   text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
 }
-
-.scroll-track {
+.mainTxt .scroll-track {
   display: inline-flex;
   animation: moveLoop 35s linear infinite;
+}
+.mainTxt .scroll-track span {
+  font-size: 19rem;
 }
 
 .mainTxt2 {
@@ -196,9 +198,9 @@
 #main-section .main-inner .row-box:nth-child(1) .leftgif {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  width: 1300px;
-  top: 2%;
+  top: 50%;
+  transform: translate(-50%, -70%);
+  width: 1200px;
   filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.3));
 }
 #main-section .main-inner .row-box:nth-child(1) .leftTxt {
@@ -206,8 +208,8 @@
   height: 300px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: 600px;
+  top: 50%;
+  transform: translate(-50%, 40%);
 }
 #main-section .main-inner .row-box:nth-child(1) .leftTxt h1 {
   text-transform: uppercase;
