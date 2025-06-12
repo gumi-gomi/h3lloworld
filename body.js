@@ -1,6 +1,6 @@
 (function() {
   function init() {
-    // Elements for overlay/slide
+
     const overlays = [
       document.querySelector('.flower-image.overlay1'),
       document.querySelector('.flower-image.overlay2'),
@@ -13,25 +13,24 @@
     const mainInner = document.querySelector('#main-section .main-inner');
     const body2 = document.querySelector('.body2');
 
-    // Element for moving GIF
+
     const manGif = document.querySelector('.detail1');
 
-    // Elements for product positioning
     const productEl = document.querySelector('.product');
     const body4El = document.querySelector('.body4');
 
-    // Verify all required elements are present
+
     if (!base || !overlay1 || !mainInner || !body2 || !manGif || !productEl || !body4El) {
       console.warn('필수 요소가 누락되어 JS 실행 중단됨');
       return;
     }
 
-    // Variables for horizontal slide animation
+ 
     let currentX = 0;
     let targetX = 0;
     const easing = 0.1;
 
-    // Update overlay fade and base image fade
+
     function updateOverlays() {
       const scrollY = window.scrollY;
       overlays.forEach((el, index) => {
@@ -51,7 +50,7 @@
       }
     }
 
-    // Calculate targetX for sliding mainInner
+
     function updateSlide() {
       const scrollY = window.scrollY;
       const body2Top = body2.offsetTop + 300;
@@ -64,14 +63,14 @@
       targetX = (slideScrollY / sectionH) * maxMoveX;
     }
 
-    // Horizontal animation loop
+
     function animate() {
       currentX += (targetX - currentX) * easing;
       mainInner.style.transform = `translateX(-${currentX}px)`;
       requestAnimationFrame(animate);
     }
 
-    // Move manGif from left:100% to left:60% based on scroll within body2
+
     function updateManGif() {
       const scrollY = window.scrollY;
       const top = body2.offsetTop;
@@ -85,7 +84,6 @@
       manGif.style.left = `${leftPct}%`;
     }
 
-    // Change productEl.top when scrolling past 50% of body4
     function updateProductPosition() {
       const scrollY = window.scrollY;
       const body4Top = body4El.offsetTop;
@@ -94,7 +92,7 @@
       productEl.style.top = scrollY >= triggerY ? '50px' : '-500px';
     }
 
-    // Combined scroll handler
+
     function onScroll() {
       updateOverlays();
       updateSlide();
@@ -105,8 +103,8 @@
     window.addEventListener('scroll', onScroll);
     window.addEventListener('resize', onScroll);
 
-    animate();      // start horizontal animation loop
-    onScroll();     // initial positions updated
+    animate();      
+    onScroll();     
   }
 
   // Initialize after DOM content is loaded

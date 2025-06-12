@@ -28,9 +28,8 @@
     .then(data => {
       document.getElementById('body').innerHTML = data;
 
-      // ✅ body.html 삽입 완료 후 body.js 실행
       const script = document.createElement('script');
-      script.src = 'body.js?v=' + Date.now(); // 캐시 방지
+      script.src = 'body.js?v=' + Date.now(); 
       document.body.appendChild(script);
     });
         fetch('footer.html')
