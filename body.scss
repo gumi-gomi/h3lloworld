@@ -132,12 +132,12 @@
     display: inline-flex;
     animation: moveLoop 35s linear infinite;
     span{
-      font-size: 19rem;
+      font-size: 300px;
       @media screen and (max-width: 800px) {
-        font-size: 12rem;
+        font-size: 230px;
       }
       @media screen and (max-width: 600px) {
-        font-size: 12rem;
+        font-size: 200px;
       
       }
     }

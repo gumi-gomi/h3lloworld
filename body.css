@@ -169,16 +169,16 @@
   animation: moveLoop 35s linear infinite;
 }
 .mainTxt .scroll-track span {
-  font-size: 19rem;
+  font-size: 300px;
 }
 @media screen and (max-width: 800px) {
   .mainTxt .scroll-track span {
-    font-size: 12rem;
+    font-size: 230px;
   }
 }
 @media screen and (max-width: 600px) {
   .mainTxt .scroll-track span {
-    font-size: 12rem;
+    font-size: 200px;
   }
 }
 
