@@ -18,24 +18,37 @@
   </div>
 </body>
 <script>
-  fetch('header.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
-    });
-        fetch('body.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('body').innerHTML = data;
+  // PC 화면 이상에서만 fetch 실행
+  if (window.innerWidth >= 768) {
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
 
-      const script = document.createElement('script');
-      script.src = 'body.js?v=' + Date.now(); 
-      document.body.appendChild(script);
-    });
-        fetch('footer.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
+    fetch('body.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('body').innerHTML = data;
+
+        const script = document.createElement('script');
+        script.src = 'body.js?v=' + Date.now();
+        document.body.appendChild(script);
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  } else {
+    // 모바일이면 경고만 띄움
+    document.body.innerHTML = `
+      <div style="padding: 50px; text-align: center; font-size: 20px;">
+        ⚠️ 이 사이트는 PC 환경에서 최적화되어 있습니다.<br>
+        모바일에서는 지원되지 않습니다.
+      </div>
+    `;
+  }
 </script>
 </html>
