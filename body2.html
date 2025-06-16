@@ -1,10 +1,33 @@
 <style>
   .mobile-wrapper {
-    padding: 20px;
-    font-family: sans-serif;
-    text-align: center;
-    background: #fffcd5;
+    position: relative;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  background: #fffcd5;
+  background-image: url(img/row3bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+  overflow: hidden;
   }
+
+  
+.mobile-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0; 동일 */
+  background-color: rgba(255, 255, 255, 0.6); /* 배경 흐림 정도 */
+  z-index: 1;
+}
+
+/* 자식 요소들 위로 올라오게 설정 */
+.mobile-wrapper > * {
+  position: relative;
+  z-index: 2;
+}
 
   .mobile-section {
     margin-bottom: 60px;
@@ -15,16 +38,16 @@
   .logo{
     font-size: 12vw;
     
-  }
-  .flower{
-    margin-top: -60px;
-  }
-
+  } 
+  
   .mobile-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .flower{
+      /* margin-top: -60px; */
+    }
 
   .mobile-section h2 {
     font-size: 24px;
