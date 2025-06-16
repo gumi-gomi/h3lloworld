@@ -1,53 +1,51 @@
 <style>
   .mobile-wrapper {
     position: relative;
-  padding: 20px;
-  font-family: sans-serif;
-  text-align: center;
-  background: #fffcd5;
-  background-image: url(img/row3bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: 0;
-  overflow: hidden;
+    padding: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    background: #fffcd5;
+    z-index: 0;
+    overflow: hidden;
   }
 
-  
-.mobile-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0; 동일 */
-  background-color: rgba(255, 255, 255, 0.6); /* 배경 흐림 정도 */
-  z-index: 1;
-}
+  .mobile-wrapper::before {
+    content: "";
+    position: fixed; /* ← 중요: fixed로 변경 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/row3bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6; /* 배경 밝기 조절 */
+    z-index: -1;
+    pointer-events: none;
+  }
 
-/* 자식 요소들 위로 올라오게 설정 */
-.mobile-wrapper > * {
-  position: relative;
-  z-index: 2;
-}
+  /* 자식 요소들이 위에 보이게 */
+  .mobile-wrapper > * {
+    position: relative;
+    z-index: 1;
+  }
 
   .mobile-section {
     margin-bottom: 60px;
   }
-  
-  .flower-section{}
 
-  .logo{
+  .logo {
     font-size: 12vw;
-    
-  } 
-  
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+
   .mobile-section img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .flower{
-      /* margin-top: -60px; */
-    }
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
 
   .mobile-section h2 {
     font-size: 35px;
@@ -90,10 +88,8 @@
 
 <div class="mobile-wrapper">
   <div class="mobile-section flower-section">
-    <h1 class="logo" style="color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">H3LLOWORLD</h1>
+    <h1 class="logo">H3LLOWORLD</h1>
     <img class="flower" src="img/m6.webp" alt="flower image" />
-    <!-- <h2>h3lloWorld</h2> -->
-    <!-- <p>Scroll-based flower image sequence and design concept for digital fashion.</p> -->
   </div>
 
   <div class="mobile-section">
